@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: cormoran
       url-base: https://github.com/cormoran
+    - name: sayu-hub  # pmw3610-driver のフォーク
+      url-base: https://github.com/sayu-hub
 
   projects:
     - name: zmk
