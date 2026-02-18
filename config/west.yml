@@ -8,7 +8,7 @@ manifest:
   projects:
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+dya
+      revision: v0.3+custom-studio-protocol
       import: app/west.yml
     # DYA Studio モジュール
     - name: zmk-module-ble-management
@@ -21,6 +21,9 @@ manifest:
       remote: cormoran
       revision: main
     - name: zmk-module-runtime-input-processor
+      remote: cormoran
+      revision: main
+    - name: zmk-behavior-runtime-sensor-rotate
       remote: cormoran
       revision: main
     # PMW3610 トラックボールドライバー
