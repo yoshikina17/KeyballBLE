@@ -1,22 +1,25 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: sayu-hub  # pmw3610-driver のフォーク
-      url-base: https://github.com/sayu-hub
-    - name: Dist16384   # あなたのフォーク
-      url-base: https://github.com/Dist16384
+    - name: cormoran
+      url-base: https://github.com/cormoran
 
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3
-      path: zmk
+      remote: cormoran
+      revision: v0.3-branch+dya
       import: app/west.yml
-    - name: zmk-pmw3610-driver
-      remote: Dist16384
+    # DYA Studio モジュール（すべて cormoran リポジトリ）
+    - name: zmk-module-ble-management
+      remote: cormoran
       revision: main
-      path: modules/zmk-pmw3610-driver
-
+    - name: zmk-module-battery-history
+      remote: cormoran
+      revision: main
+    - name: zmk-module-settings-rpc
+      remote: cormoran
+      revision: main
+    - name: zmk-module-runtime-input-processor
+      remote: cormoran
+      revision: main
   self:
     path: config
